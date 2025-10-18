@@ -29,6 +29,18 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 /**
+ * Root route for healthcheck
+ */
+app.get('/', (req, res) => {
+    res.json({ 
+        status: 'healthy', 
+        service: 'AI Cold Caller',
+        timestamp: new Date().toISOString(),
+        version: '1.0.0'
+    });
+});
+
+/**
  * Log call status to file
  * @param {string} phoneNumber - The phone number being called
  * @param {string} status - Call status (started, completed, failed)
