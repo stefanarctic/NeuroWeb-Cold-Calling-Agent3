@@ -1,0 +1,22 @@
+{
+  "name": "ai-cold-caller",
+  "version": "1.0.0",
+  "description": "AI Cold Caller using Twilio and ElevenLabs for automated batch calling",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node test-setup.js"
+  },
+  "keywords": ["twilio", "elevenlabs", "cold-calling", "ai", "voice"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "twilio": "^4.19.0",
+    "ws": "^8.14.2",
+    "csv-parser": "^3.0.0",
+    "dotenv": "^16.3.1"
+  }
+}
